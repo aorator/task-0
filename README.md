@@ -1,6 +1,6 @@
 # task-0 IEEE AI/ML vertical
 
-**Name:** [Ishaan Gupta]
+**Name:** Ishaan Gupta
 
 ## Structure
 ```
