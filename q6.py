@@ -1,0 +1,41 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("data/processed_student_performance.csv")
+
+plt.figure(figsize=(10, 5))
+plt.bar(df["Student"], df["Final_Score"], color="steelblue")
+plt.title("Student vs Final Score")
+plt.xlabel("Student")
+plt.ylabel("Final Score")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig("plots/final_scores.png")
+plt.close()
+
+plt.figure(figsize=(7, 5))
+plt.scatter(df["Hours_Studied"], df["Final_Score"], color="darkorange")
+plt.title("Hours Studied vs Final Score")
+plt.xlabel("Hours Studied")
+plt.ylabel("Final Score")
+plt.tight_layout()
+plt.savefig("plots/study_vs_score.png")
+plt.close()
+
+plt.figure(figsize=(7, 5))
+plt.hist(df["Final_Score"], bins=8, color="seagreen", edgecolor="black")
+plt.title("Distribution of Final Scores")
+plt.xlabel("Final Score")
+plt.ylabel("Frequency")
+plt.tight_layout()
+plt.savefig("plots/score_distribution.png")
+plt.close()
+
+plt.figure(figsize=(7, 5))
+plt.scatter(df["Attendance"], df["Improvement"], color="purple")
+plt.title("Attendance vs Improvement")
+plt.xlabel("Attendance (%)")
+plt.ylabel("Improvement (Final - Previous)")
+plt.tight_layout()
+plt.savefig("plots/custom_plot.png")
+plt.close()
