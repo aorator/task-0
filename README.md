@@ -8,14 +8,14 @@ pip install numpy pandas matplotlib
 
 
 ## Running
-
+```
 python3 q1.py   # enter N, then N space-separated integers
 python3 q2.py   
 python3 q3.py   # enter N when prompted
 python3 q4.py
 python3 q5.py   # writes data/processed_student_performance.csv
 python3 q6.py   # writes plots/*.png (run q5.py first)
-
+```
 
 ## Notes
 - Q1 avoids `max()`, `min()`, `sum()`, `sort()`, `sorted()` as required.
